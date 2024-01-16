@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+        <title>Five nights at freddy's 3</title>
+        <link rel="stylesheet" href="myStyle.css">
+
+
+
+    </head>
+    <body>
+        
+        <ul>
+            <li><a href="HorrorDescription.html">Horror Description</a></li>
+            <li><a href='fnaf1.html'>Five nights at freddy's</a></li>
+            <li><a href="fnaf2.html">Five nights at freddy's 2</a></li>
+            <li><a href="fnaf3.html">Five nights at freddy's 3</a></li>
+            <li><a href="fnaf4.html">Five nights at freddy's 4</a></li>
+            <li><a href="fnafslcn.html">Five nights at freddy's: Sister location</a></li>
+            <li><a href="fnafps.html">Five nights at freddy's: Pizzeria Simulator</a></li>
+            <li><a href="refrences.html">Refrences</a></li>
+        </ul>
+        
+        <h1>Five nights at freddy's 3</h1>
+        
+        <h2>A brief descripton</h2>
+        
+        <p>
+        Five nights at freddy's 3 was released in May 3rd 2015. Story wise, Five nights at freddy's 3 takes place 30 years after the original game, making it an actual sequel unlike Five nights at freddy's 2. Once again you are a security guard, this time though you're keeping watch of a horror attraction based on the rumors and legends of the old Freddy Fazbears Pizza. This time, there's only one animatronic that can kill you, called Springtrap, one of, lets say, more gruesome designs of the franchise since it is a rotting human body inside the suit but, let's ignore that since it doesn't have much significance when it comes to AI. Anyway, despite springtrap being the only animatronic that can kill you, that doesn't mean he's the only "animatronic" in the location. There's also phantom "animatronics" that are, basically, fragments of the protagonists' imagination come to life due to the bad ventilation of the building. Those are:</p>  
+        
+        <ul>
+        <li>Phantom Freddy</li>
+        <li>Phantom Chica</li>
+        <li>Phantom Foxy</li>
+        <li>Phantom Baloon Boy</li>
+        <li>Phantom Manglre</li>
+        <li>Phantom Puppet</li>
+        </ul>
+        
+        
+        <p>Speaking of bad installations, your cameras are also pretty terrible breaking every now and then making you have to reset them along with the ventilation through a maintenence panel, forcing you to take your sight of the cameras, making you vulnerable to springtrap. This also were the phantoms become a threat since, when they jumpscare you, instead of killing you, they either break your camera or your ventilation or both. The puppet is a special because, along with breaking your ventilation, it also blocks your vision making you even more vulnerable. Springtrap also has some tricks up his sleeve as he also utilizes the vents to get to your office faster and the only way to stop him is to seal the vent through the vent cameras that you can use to spot springtrap when he enters them. You don't have any doors or mask or flashlight to defend yourself, you only have an audio system, originally used to scare patrons, to distract him, however, it also breaks and has to be restarted through the maintanance panel. While similar in a play sense to the others it offers up its own set of challenges that the player has to conquer.
+        </p>
+        
+        <h3>AI:</h3>
+        <p>Like the two before it, five nights at freddy's 3 follows a similar movement opportunity system. It does have a few tweaks to fit the phantoms and springtrap, obviously. Springtrap's AI is, let's say complicated. You see, springtrap has a what's called a movement formula and, it looks like this:<!--movement formula picture--></p>
+        
+        <p>Saying it's complicated may have been a bit of an understatement but, the point of this page is to explain this type of AI. So, the top part of the code is indicating that the formula will run every second. The move counter is a simple counter that increases by 1 every second, then that gets compared to your AI value, which has been explained in the first game's analysis, however, as seen, there's also two other valuables it's compared to. The aggresive factor, plus a randomly generated numbe up to 15, and the total turns. The aggresive factor is usually 0 unless there's been a phantom jumpscare, a ventilation error, you've sat in the office doing nothing for 10 seconds or the time is above 4 AM. If any of these conditions are met the value changes from 0 to 1. The total turns value is basically a counter from 1-4 that determines where springtrap moves to. If it's 1 there's no movement, and the rest depend on the closest cameras. </p>
+        
+        <p>It's best to give an example for a better understandng when it comes to comlicated formulas like this. For instance, It's night 2, making the AI value 2, and there's a ventilation error, upping the aggressive factor to 1, the random number is 5 and the total turns is 4. The formula that is a result of this is (10-2)-(1)+5-4= 8. That is compared to the movement counter which has to be bigger than the result so let's say it's 9. Since the movement counter goes up every second that means he's going to be moving every 9 seconds.</p>
+        
+        <p>Confusing right? Luckily the phantoms are easier to explain so it will give us break from complicated formulas.</p>
+        
+        <p>Some of the phantoms are based on springtrap's night AI and they all become active at 1 AM</p>
+        <ul>
+        <li>Phantom BB(Balloon Boy)<br>
+            <p>Phantom BB has a chance to appear every 20 seconds which depends on springtraps AI, meaning that it can go up to 10(In this game the highest AI value is 10 instead of 20). The only way the player can avoid him is by switching cameras quickly. This is only achievable through a certain amount of frames the player is given. In night 2 it's 90 frames, on night 3 it's 80 frames, on night 4 it's 70, on night 5 it's 60 and on night 6 it's 50.</p></li>
+            
+        <li><p>Phantom Mangle, Chica and Puppet function similarly to BB so there's isn't much need to talk about them</p></li>
+        
+        <li>Phantom Freddy<br>
+            <p>He works a bit diffrently. He's spawn opportunities occour every 60 seconds. The way he waits for his jumpscare is similar to BB's but multiplied by 3. This means the frames you get to look at him are 240 for night 3, 210 for night 4, 180 for night 5 and 150 for night 6. When the timer runs out he dissapeares and eery 1 second he has a 50% chance to jumpscare the player. This can be avoided by looking at the cameras</p></li>
+            
+        <li>Phantom Foxy<br>
+            <p>Foxy is again an odd one since his spawn depends completely on luck. His spawn opportunities happen every time the player opens the cameras. These chances are in night 2, 1/1000, in night 3, 1/50, in night 4, 1/25 and in night 5 and 6 1/10. It's really hard to avoid his spawn but considerably easy to avoid his jumpscare since the player can see him right before turning to the maintenance panel. If that happens the player must check the cameras </p></li>
+        </ul>
+        
+        <p>And that's basically it for the phantoms apart from the fact that they have a jumpscare cooldown. That means if a phantom performs a jumpscare the next will have to wait 10 seconds</p>
+        
+        <p>Now, with all that in mind let's see the AI values of every night</p>
+        <ul>
+        <li>Night 1:<br>
+            <p>In night 1 literally nothing happens, which is why it isn't mentioned at all in the phantom section. Anyway, a night without animatronic madness is always appreciated.</p></li>
+        <li>Night 2:<br>
+            Springtrap: 2<br>
+            Phantom BB: 2<br>
+            Phantom Mangle: 2</li><br>
+        <li>Night 3:<br>
+            Springtrap: 3<br>
+            Phantom BB: 3<br>
+            Phantom Mangle: 3<br>
+            Phantom Freddy: 3<br>
+            Phantom Chica: 3<br>
+            Phantom Foxy: 3</li><br>
+        <li>Night 4:<br>
+            Springtrap: 4<br>
+            Phantom BB: 4<br>
+            Phantom Mangle: 4<br>
+            Phantom Freddy: 4<br>
+            Phantom Chica: 4<br>
+            Phantom Foxy: 4<br>
+            Phantom Puppet: 4</li><br>
+        <li>Night 5:<br>
+            Springtrap: 5<br>
+            Phantom BB: 5<br>
+            Phantom Mangle: 5<br>
+            Phantom Freddy: 5<br>
+            Phantom Chica: 5<br>
+            Phantom Foxy: 5<br>
+            Phantom Puppet: 5</li><br>
+        <li>Night 6(Nightmare mode)(Of course Five nights at freddy's 3 has a night 6 but, suprisingly, there's no night 7):<br>
+            Springtrap: 7<br>
+            Phantom BB: 7<br>
+            Phantom Mangle: 7<br>
+            Phantom Freddy: 7<br>
+            Phantom Chica: 7<br>
+            Phantom Foxy: 7<br>
+            Phantom Puppet: 7</li><br>
+        </ul>
+        <p>After night 6 is over the attraction burns to the ground and the player has finished Five nights at freddy's 3</p>
+
+
+
+
+
+
+
+
+    </body>
+</html>
