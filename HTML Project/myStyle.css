@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(18, 18, 18)!important;
+    
+    color: rgb(232, 232, 232)!important;
+}
+
+.navList{
+    background-color: rgb(34, 34, 34);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+   
+}
+
+div.navList>ul{
+  list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.navList>ul>li{
+    float: left;
+    border: solid 1px darkgrey;
+	width:180px;
+	background-color: rgb(7, 7, 7);
+	border-radius:16px;
+	margin-right:8px;
+    color: rgb(249, 249, 249);
+}
+
+div.navList a,span{
+    display: block;
+    text-align: center;
+}
+
+div.navList span{
+    border-radius: inherit;
+}
+
+div.navList a{
+    text-decoration-line: none;
+    color: white;
+}
+
+div.navList a:hover{
+    color: rgb(203, 204, 155);
+}
+
+h2{
+    text-align: center;
+    
+}

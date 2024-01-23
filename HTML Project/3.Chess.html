@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chess</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+            
+            body {
+                background-color: #1c1c1c;
+                color: #b2b2b2;
+                font-family: 'Old Standard TT', serif;
+                margin: 20px;
+            }
+
+            h1 {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 60px;
+            }
+            
+            h {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 30px;
+            }
+                #header {
+                background-color: #3498db; /* Blue background for Header 1 */
+            }
+
+            p {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 24px;
+                letter-spacing: 1px;
+            }
+            
+            li {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 20px;
+                letter-spacing: 1px;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap">
+    </head>
+    <body>
+        
+        <h1>AI in Chess</h1>
+        <img src="photos/ChessImage.jpg" alt="ChessImage" style="width: 100%; height: auto;">
+
+        <h onclick="toggleParagraph('paragraph1')">History</h>
+        <p id="paragraph1" class="hidden">With its current rules, the 15th-century game of chess is so complicated that it has never been solved and may never be. When both players play flawlessly, a game is considered solved if it can be accurately predicted from any position to result in a win, loss, or tie. Artificial intelligence (AI) has been around for a long time; chess algorithms date back to the early 1930s, but they have only lately surpassed humans in this game. The earliest chess-playing algorithms were developed simultaneously with the first electronic computers. These early chess algorithms featured contributions from notable historical figures in the field of computer science.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph2')">Gameplay</h>
+        <p id="paragraph2" class="hidden">For the majority of AIs, one of the most crucial ideas is giving each game piece a value that the algorithms use to determine the optimal moves.Chess engine algorithms include ideas from human chess theory research.
+        <button onclick="toggleList('list1')">Show concepts</button></p>
+            <ul id="list1" class="hidden">
+                <li>King safety: In chess engines, ensuring the safety of the king is a top priority. Algorithms evaluate positions based on factors like pawn shields, the presence of open lines near the king, and the ability to castle. A safe king position is crucial for overall position evaluation.</li>
+                <li>Pawn structure:Chess engines evaluate pawn arrangements to determine their advantages and disadvantages. Various arrangements can affect the way pieces move, who controls important squares, and even pawn breaks, which can affect how the situation is assessed overall.</li>
+                <li>Material imbalances: Every piece in chess has a value assigned by the engines, and material imbalances happen when one side has a different set of pieces than the other. Algorithms evaluate the benefits and drawbacks of these imbalances, assisting the engine in making smart choices.</li>
+                <li>Piece development: Controlling important squares and adding pieces to the game are essential components of effective piece development. Prioritizing moves that maximize the growth of knights and bishops, chess engines also take into account pawn moves that create openings for rooks. For a position to be strong, piece coordination must be optimized.</li>
+                <li>Center control: In chess, control of the central squares (d4, d5, e4, e5) is a key idea. Moves that improve control over the center are given priority by chess engines because they offer a strong base for attacking strategies and improve piece mobility.</li>
+                <li>Material Disproportions: The term "material disproportion" describes disparities between the number and caliber of the pieces. Chess engines take into account scenarios in which a player may give up material in order to gain a tactical edge, protect their king, or gain a positional advantage. Making strategic decisions requires evaluating material disparities.</li>
+            </ul>
+        <br>
+        <h onclick="toggleParagraph('paragraph3')">Engine Algorithm</h>
+        <p id="paragraph3" class="hidden">The most advanced chess engines available today include of two components: an evaluation function that selects the move to play and a search algorithm that narrows down the pool of possible moves. These algorithms investigate the tree of potential chessboard configurations. You may keep track of the number of simulations that have been run through each configuration and the number of victories. You can then use this information to determine some of the best possible movements by selecting nodes that have not been explored much or nodes with the greatest win percentages. After this pre-selection Chess AIs utilize an evaluation function to determine the next move to play. Next, the move with the configuration that optimizes the evaluation function will be selected.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph4')">Neural Netwrok & Computational Depth</h>
+        <p id="paragraph4" class="hidden">This algorithm itself creates the evaluation function from a large number of game simulations. This revolution in chess artificial intelligence caused the designers of Stockfish to modify their AI by implementing such a neural network, which increased its already high level. Chess engines can evaluate a vast number of configurations after the next move and calculate them. The application of a neural network, which produced an evaluation function superior to hours of simulated games, is crucial to the AIs' victory.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph5')">End Game</h>
+        <p id="paragraph5" class="hidden">In addition to all these algorithms AIs remember endgame tablebases. The database keeps track of every possible position when there are still pieces on the board, as well as the optimal moves based on whether it is black or white to make the next move. Certain engines incorporate these endgame tablebases, enabling them to function flawlessly, specifically in situations where the board has fewer than eight pieces.</p>
+        <br>
+        <h><a href="4.Warcraft.html">Next</a></h>
+        <br>
+        <h><a href="0.Home.html">Home</a></h>
+        
+    <script>
+        function toggleParagraph(paragraphId) {
+            var paragraph = document.getElementById(paragraphId);
+            paragraph.classList.toggle('hidden');
+        }
+
+        function toggleList(listId) {
+            var list = document.getElementById(listId);
+            list.classList.toggle('hidden');
+        }
+    </script>
+
+    </body>
+    </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Warcraft III</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+            
+            body {
+                background-color: #1c1c1c;
+                color: #b2b2b2;
+                font-family: 'Old Standard TT', serif;
+                margin: 20px;
+            }
+
+            h1 {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 60px;
+            }
+            
+            h {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 30px;
+            }
+                #header {
+                background-color: #3498db; /* Blue background for Header 1 */
+            }
+
+            p {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 24px;
+                letter-spacing: 1px;
+            }
+            
+            li {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 20px;
+                letter-spacing: 1px;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap">
+    </head>
+    <body>
+        
+        <h1>AI in Warcraft III</h1>
+        <img src="photos/Warcraft3.jpg" alt="WarcraftImage" style="width: 100%; height: auto;">
+        <br>
+        <h onclick="toggleParagraph('paragraph1')">History</h>
+        <p id="paragraph1" class="hidden">Warcraft III: Reign of Chaos is a computer game released by Blizzard Entertainment in 3 July 2002.[1] It is a real-time strategy computer game,[1] the second sequel to Warcraft: Orcs & Humans and the third game set in the Warcraft universe.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph2')">Gameplay</h>
+        <p id="paragraph2" class="hidden">The player can go against the AI in a map of his choosing. Each side can pick one of the 4 differrent factions. Starts by building his base, training units by spending resources with the ultimate goal of destroying the enemy's base. Each faction supports a variaty of differrent units, stractures and heroes with a mix of unique effects and abilities. The players gather resources which they spend them for training units or constructing buildings which provide effects or the ability to train or upgrade special stronger units. There two differrent resources; wood for buildings and gold for combat units.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph3')">Story Mode</h>
+        <p id="paragraph3" class="hidden">The Game supports story mode (Campaign) which includes many destinct single player missions that put the player in differrent circumstances with specific objectives to complete. The AI doesnt follow a normal predetermined pattern, but is fixed on performing specific actions. The Story Mode Missions include:
+        <button onclick="toggleList('list1')">Show concepts</button></p>
+            <ul id="list1" class="hidden">
+                <li>Survival Missions: Player has to defend his base against enemy waves of attacks.</li>
+                <li>Search and Destroy: Player has to search across the map and complete objectives, usually destroy the enemy base.</li>
+                
+        </ul>
+        <br>
+        <h onclick="toggleParagraph('paragraph4')">AI interactions</h>
+        <p id="paragraph4" class="hidden">The AI is used to control the behavior of computer-controlled units and opponents. The AI in RTS games typically involves decision-making algorithms that determine how computer-controlled units move, attack, defend, and interact with the player and other units. The Ai generate responsive, adaptive or intelligent behaviors. It reads the players actions and responds unrealisticly. It can move many different  group units indepedantly at the same time.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph5')">Functionality</h>
+        <p id="paragraph5" class="hidden">In order to create a more alive enviroment the The AI cheats. It knows what the player has at his disposal and tries to counter him. The AI has complete visibility over the players actions which helps it promt a reaction. This can comes with the form of making units that counter the player's unit combinations or by attacking valunarable spots in the player's defence. For this reason there are always differrent difficulties in the Options tab, which of course increases the amount of responsivness the AI has.</p>
+        <br>
+        <h><a href="5.References.html">Next</a></h>
+        <br>
+        <h><a href="0.Home.html">Home</a></h>
+        
+        <script>
+        function toggleParagraph(paragraphId) {
+            var paragraph = document.getElementById(paragraphId);
+            paragraph.classList.toggle('hidden');
+        }
+
+        function toggleList(listId) {
+            var list = document.getElementById(listId);
+            list.classList.toggle('hidden');
+        }
+    </script>
+   
+    </body>
+    </html>

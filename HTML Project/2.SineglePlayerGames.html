@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SinglePlayerGames</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+            
+            body {
+                background-color: #1c1c1c;
+                color: #b2b2b2;
+                font-family: 'Old Standard TT', serif;
+                margin: 20px;
+            }
+
+            h1 {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 60px;
+            }
+            
+            h {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 30px;
+            }
+                #header {
+                background-color: #3498db; /* Blue background for Header 1 */
+            }
+
+            p {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 24px;
+                letter-spacing: 1px;
+            }
+            
+            li {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 20px;
+                letter-spacing: 1px;
+            }
+            
+        </style>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap">
+    </head>
+    <body>
+        <h1>Single Player Games</h1>
+        <img src="photos/VideoGames.jpg" alt="VideoGamesImage" style="width: 100%; height: auto;">
+        <br>
+        <h onclick="toggleParagraph('paragraph1')">AI in Strategy Games</h>
+        <p id="paragraph1" class="hidden">Digital strategy game production is already heavily influenced by artificial intelligence (AI), and this trend will only continue as technology advances. What effects will this have on consumers' gameplay experiences?
+        <button onclick="toggleList('list1')">Show concepts</button></p>
+            <ul id="list1" class="hidden">
+                <li>Enhanced Gameplay: Adaptive storytelling, responsive NPCs, and dynamic in-game events will all be made possible by AI-driven technologies, which will improve the overall gaming experience by building more realistic and engaging virtual environments that react to player choices and actions.</li>
+                <li>Procedurally-Generated Content: AI-driven algorithms will create a variety of personalized and dynamic game environments, quests, and challenges on the fly, giving players an immersive and ever-changing gaming experience.</li>
+                <li>Improved Game Balancing: Real-time modifications to game mechanics, difficulty settings, and item distribution will be possible thanks to AI analytics, which will continuously evaluate player behavior, skill levels, and preferences. This will guarantee a more personalized and equitable experience for both individual players and the community at large.</li>
+                <li>Cooperative AI: Advanced AI companions that adjust to players' strategies, and meaningfully contribute to team dynamics will enhance collaborative gameplay and make cooperative gaming more engaging and pleasurable.</li>
+            </ul>
+        <br>
+        <h><a href="3.Chess.html">Next</a></h>
+        <br>
+        <h><a href="0.Home.html">Home</a></h>
+        
+        <script>
+        function toggleParagraph(paragraphId) {
+            var paragraph = document.getElementById(paragraphId);
+            paragraph.classList.toggle('hidden');
+        }
+
+        function toggleList(listId) {
+            var list = document.getElementById(listId);
+            list.classList.toggle('hidden');
+        }
+            
+    </script>
+        
+    </body>
+    </html>

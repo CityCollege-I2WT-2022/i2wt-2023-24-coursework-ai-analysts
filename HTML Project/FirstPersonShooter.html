@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TF2 Bots Guide</title>
+</head>
+<body>
+    <header>
+        <h1>Team Fortress 2 Bots Guide</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterIntroduction.html> Introduction </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterBots.html> Bots </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterStock-bots.html> Stock AI Bots </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterPuppet-bots.html> Puppet Bots </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterHtml-css.html> HTML and CSS </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterAi-bot-behavior.html> AI Bot Behavior </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterAi-bot-bugs.html> Bugs </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterAi-bot-modes.html> Game Modes and Maps AI Bots Do Not Work On </li>
+            <li><link: https://github.com/CityCollege-I2WT-2022/i2wt-2023-24-coursework-ai-analysts/blob/main/FirstPersonShooterSmallerSections.html> Smaller Important Sections </li>
+        </ul>
+    </nav>
+
+<section id="Introduction">
+    <h2>Introduction</h2>
+    <p>Welcome to the Team Fortress 2 Bots Guide! Whether you're a new player or a seasoned veteran, understanding the various types of bots in TF2 can enhance your gaming experience. This guide provides insights into stock AI bots, puppet bots, and tips on beautifying your server with HTML and CSS.</p>
+
+    <section id="bots">
+    <h3>Bots</h3>
+    
+        <p>“Human teammates might judge you, but will these soulless automatons? YES. They're not blind. But they ARE mute, so your incompetence is a secret they will take to their grave.”<br>
+        — The Soldier</p>
+    
+    <p>A bot is a computer-controlled player on a server. There are two types of bots in Team Fortress 2: AI bots and Puppet bots. AI bots are coded with sophisticated artificial intelligence designed to emulate player actions in the game and can be used without enabling cheats. Puppet bots have no AI coding but are useful for testing and training. Puppet bots require the server to have cheats enabled, which also disables achievements.</p>
+</section>
+
+    <ul>
+    <li> </li>
+    </ul>
+    </section>
+
+
+ <section id="stock-bots">
+    <h2>Stock AI Bots</h2>
+    <p>Stock AI bots in Team Fortress 2 offer a challenging gaming experience. Learn about their behaviors, difficulty levels, and how to adapt your strategy to outsmart them.</p>
+
+    <p>The stock AI bots, or TFBots, are designed to emulate human players and are not directly controlled. Additionally, their classes are chosen at random. They use sophisticated AI code based on the PlayerBot and Infected AI featured in the Left 4 Dead series.[1] AI bots do not require the server to have cheats enabled; therefore, achievements are enabled while playing with them. There is one exception, however; Bots do not see Deathcam shots when killed; therefore, a player cannot attain Deathcam-related achievements. Also, killing a bot with a Strange weapon will not increase the weapon's kill count, unless the weapon has a Strange Part: Robots Destroyed applied to it, in which case, the kill will be added to the Strange Part and not the main counter.</p>
+
+    <p>AI bots come in four skill levels ranging from easy to expert. Sigsegv has compiled a detailed explanation of the skill differences.</p>
+
+    <p>AI bots can be indirectly controlled to an extent:</p>
+
+    <ul>
+        <li>Any friendly and enemy bot that the player focuses on with their crosshair during setup time will taunt.</li>
+        <li>A friendly Medic bot will heal a player if they utilize the "Medic!" voice command.</li>
+        <li>If a Medic bot is healing and has an ÜberCharge ready, using the voice commands "Go go go!" or "Activate Charge!" will cause the bot to immediately activate his ÜberCharge.</li>
+        <li>A Medic bot with an ÜberCharge ready will immediately activate the charge if he or the healing target gets hurt significantly.</li>
+        <li>Bots will attempt to join teammates performing a partner taunt (e.g. the High Five) or a group taunt (e.g. the Conga).</li>
+    </ul>
+
+    <p>Using bots on unsupported maps:</p>
+
+    <p>Nav mesh editing requires cheats enabled, so type "sv_cheats 1" in the console.</p>
+    <p>Build the initial nav mesh using the "nav_generate" command.</p>
+    <p>Wait while the game generates AI paths, progress is tracked in the console.</p>
+    <p>Map will reload.</p>
+    <p>Optionally tweak the generated nav mesh to add missing data and remove erroneous data. Use "nav_edit 1" to enter nav mesh editing mode.</p>
+    <p>Reload/Restart the server (optional, but if it is not done, then achievements will be disabled).</p>
+    <p>Open console and type "tf_bot_add <number>" as above to add bots.</p>
+    <p>WARNING: The game is likely to crash if you edit the navigation mesh with bots enabled.</p>
+
+    <p>Bots can be used on any map on which the above steps have been performed without having to repeat them, except for entering the "tf_bot_add <number>" command each time bots need to be added.</p>
+
+    <p>Auto-generated nav meshes work best on Control Points, King of the Hill, Payload, and Capture the Flag maps. On Mannpower maps, the bots will play as Capture the Flag, but be unable to use Grappling Hooks or intelligently use the Powerups they walk over.</p>
+
+    <p>Setting the value of the console command "tf_bot_offense_must_push_time" to 0 allows bots to fight each other in maps without objectives that they can recognize, unless the map doesn't have any respawn room entities.</p>
+
+    <p>Stock maps with no official bot support:</p>
+    <p>Complete list (click "Expand" on the right):</p>
+</section>
+   
+    
+    
+<section id="puppet-bots">
+    <h2>Puppet Bots</h2>
+    <p>Discover the world of puppet bots and how they can be customized to create unique challenges for players. Explore scripting options and commands to control puppet bots effectively.</p>
+
+    <p>Puppet bots have no AI code and cannot move or act on their own. These bots can be used like puppets though: players can manipulate them to follow the player's commands such as following the player around and firing their weapons. Puppet bots are mainly used for testing purposes and can also create stunning visuals if manipulated accordingly. To spawn puppet bots, sv_cheats has to be set to 1.</p>
+
+    <h3>Puppet bot commands</h3>
+    <p>Not all of the following commands work; some working commands are also omitted.</p>
+
+    <p>These commands may or may not work for AI bots as well.</p>
+
+    <p>Note: entering the command without any values will display the command's current setting and a brief description.</p>
+
+    <dl>
+        <dt>bot</dt>
+        <dd>This command will create a bot on the given team with the specified class and name. If team or name is omitted, they will be assigned randomly.</dd>
+        <p><strong>Syntax:</strong> bot [&lt;teamname/number&gt;] [&lt;classname&gt;] [&lt;name&gt;] [&lt;number&gt;]</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;number&gt;:</strong> Amount of bots to add.</li>
+            <li><strong>&lt;teamname/number&gt;:</strong> Specifies the team name or number to assign the bot. Where name/number can be RED or 1, BLU or 0.</li>
+            <li><strong>&lt;classname&gt;:</strong> The classname of the class can be Demoman, Engineer, Heavy, Medic, Pyro, Scout, Soldier, Sniper, or Spy.</li>
+            <li><strong>&lt;teleport&gt;:</strong> Teleports the spawned bot to where your cursor is aiming.</li>
+            <li><strong>&lt;targetdummy&gt;:</strong> Prevents the spawned bot from losing health.</li>
+            <li><strong>&lt;name&gt;:</strong> name can be anything. If there is already someone with the same name, an incremental number (starting at 1) surrounded with parenthesis will be added to the beginning of the name. For example, joe, (1)joe, (2)joe, etc. If no name is given then the name will be "bot" followed by a number starting with 01; for example, the first bot will be Bot01, the next Bot02, and so on.</li>
+        </ul>
+        <p><strong>Example:</strong> bot -team red -class Engineer -name joe</p>
+    </dl>
+
+    <dl>
+        <dt>bot_changeclass</dt>
+        <dd>Force all bots to change to the specified class.</dd>
+        <p><strong>Syntax:</strong> bot_changeclass &lt;name&gt; &lt;classname&gt;</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;name&gt;:</strong> Name of the target bot.</li>
+            <li><strong>&lt;classname&gt;:</strong> The classname of the class the bot will switch to. Default is "" (aka blank).</li>
+        </ul>
+        <p><strong>Example:</strong> bot_changeclass bot01 Soldier</p>
+    </dl>
+
+    <dl>
+        <dt>bot_changeteams</dt>
+        <dd>Make all bots change teams. This forces all the bots to switch teams. If a bot was on the RED team then it will now be on the BLU team and vice versa.</dd>
+        <p><strong>Syntax:</strong> bot_changeteams</p>
+        
+    </dl>
+
+    <dl>
+        <dt>bot_command</dt>
+        <dd>Sends specified command on behalf of specified bot.</dd>
+        <p><strong>Syntax:</strong> bot_command &lt;name/all&gt; &lt;console command&gt;</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;name/all&gt;:</strong> Name or id of the bot to send the command to. Setting this to 'all' will send the command to all the bots.</li>
+            <li><strong>&lt;console command&gt;:</strong> Can be any of the ones listed in console commands, as well as some of the cheats.</li>
+        </ul>
+        <p><strong>Example 1:</strong> bot_command bot01 "voicemenu 0 0"</p>
+        <p><strong>Example 2:</strong> bot_command bot01 "taunt"</p>
+        <p>The slot commands (slot1, slot2, etc.) do not work with bot_command, however with bot_forcefireweapon, all bots in that class can be made to switch to a weapon and start firing, then made to stop. Only the entire group of bots in that class can be made to do so, however.</p>
+    </dl>
+
+    
+
+    <dl>
+        <dt>bot_dontmove</dt>
+        <dd>Bots are allowed or prevented from moving. When set to 1 the bots cannot move but they can still turn and jump. Note with a combination of this command and bot_mimic bots can be moved to certain areas and left there.</dd>
+        <p><strong>Syntax:</strong> bot_dontmove &lt;integer&gt;</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;integer&gt;:</strong> Bots will be allowed to move when set to 1. Default is 0 (disabled).</li>
+        </ul>
+        <p><strong>Example:</strong> bot_dontmove 1</p>
+    </dl>
+
+    
+
+    <p>bot_forceattack</p>
+    <p>Force all bots to automatically fire their currently selected weapons. If bot_forceattack2 is set to 0, bots execute primary_fire; if set to 1, bots execute secondary_fire.</p>
+    <p><strong>Syntax:</strong> bot_forceattack &lt;integer&gt;</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><strong>&lt;integer&gt;:</strong> When set to 1, all bots fire their guns. Default is 0 (disabled).</li>
+    </ul>
+    <p><strong>Example:</strong> bot_forceattack 1</p>
+
+    
+
+    <p>bot_forceattack2</p>
+    <p>Make all bots execute secondary_fire on their currently selected weapons when bot_forceattack is set to 1.</p>
+    <p><strong>Syntax:</strong> bot_forceattack2 &lt;integer&gt;</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><strong>&lt;integer&gt;:</strong> Bot will use its weapon's secondary_fire when set to 1, primary_fire when set to 0.</li>
+    </ul>
+    <p><strong>Example:</strong> bot_forceattack2 1</p>
+
+
+    <dl>
+        <dt>bot_hurt</dt>
+        <dd>Hurt a bot by team, or all bots ("all").</dd>
+        <p><strong>Syntax:</strong> bot_hurt [&lt;name&gt;] [&lt;team&gt;] [&lt;damage&gt;]</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;name&gt;:</strong> Name of the bot to hurt.</li>
+            <li><strong>&lt;team&gt;:</strong> Specifies the team name of the bot to hurt. Can be RED, BLU, or all.</li>
+            <li><strong>&lt;damage&gt;:</strong> Specifies the amount of damage the bot will receive. If a negative number is set, it will heal (and overheal) the bot instead.</li>
+        </ul>
+        <p><strong>Example:</strong> bot_hurt -name joe -team red -damage 150</p>
+    </dl>
+</section>
+    
+
+<section id="html-css">
+    <h2>HTML and CSS Beautification</h2>
+    <p>Improve the visual appeal of your TF2 server by learning how to enhance HTML and CSS. From customizing server messages to styling the server MOTD, these tips will make your server stand out.</p>
+    
+    <h3>AI Bot Commands</h3>
+    <p>Enhance the AI experience on your TF2 server with these useful commands. For more comprehensive options, refer to the Valve list of TF2 console commands and variables. To use AI bots on supported maps, the server administrator should type the following commands into the console (some may require sv_cheats to be set to 1):</p>
+
+    <dl>
+        <dt>tf_bot_add</dt>
+        <dd>This command will create one or more AI bots of random classes on random teams. They will also be assigned random names from a default set.</dd>
+        <p><strong>Syntax:</strong> tf_bot_add [&lt;count&gt;] [&lt;class&gt;] [&lt;team&gt;] [&lt;difficulty&gt;] [&lt;name&gt;] [noquota]</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_difficulty</dt>
+        <dd>Defines the skill of bots joining the game.</dd>
+        <p><strong>Syntax:</strong> tf_bot_difficulty &lt;level&gt;</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_fire_weapon_allowed</dt>
+        <dd>Determines whether bots should fire weapons. If disabled, bots can still use certain non-damaging weapons such as the Medi Gun.</dd>
+        <p><strong>Syntax:</strong> tf_bot_fire_weapon_allowed &lt;integer&gt;</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_force_class</dt>
+        <dd>If set to a class name, all TFBots will respawn as that class.</dd>
+        <p><strong>Syntax:</strong> tf_bot_force_class &lt;class&gt;</p>
+        
+    </dl>
+
+    
+
+    <dl>
+        <dt>tf_bot_kick</dt>
+        <dd>This command will remove one or all AI bots.</dd>
+        <p><strong>Syntax:</strong> tf_bot_kick &lt;name/all/team&gt;</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_kill</dt>
+        <dd>This command will kill one or all AI bots.</dd>
+        <p><strong>Syntax:</strong> tf_bot_kill &lt;name/all/team&gt;</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_melee_only</dt>
+        <dd>Determines whether a bot should only use melee weapons or not.</dd>
+        <p><strong>Syntax:</strong> tf_bot_melee_only &lt;integer&gt;</p>
+        
+    </dl>
+
+   
+
+    <dl>
+        <dt>tf_bot_quota</dt>
+        <dd>Determines the total number of TFBots in the game. Only has effect if tf_bot_quota_mode = "fill" or "match".</dd>
+        <p><strong>Syntax:</strong> tf_bot_quota &lt;integer&gt;</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_quota_mode</dt>
+        <dd>Determines the type of quota.</dd>
+        <p><strong>Syntax:</strong> tf_bot_quota_mode &lt;normal/fill/match&gt;</p>
+        
+    </dl>
+
+    <dl>
+        <dt>tf_bot_taunt_victim_chance</dt>
+        <dd>Determines how often a Bot will taunt a human victim.</dd>
+        <p><strong>Syntax:</strong> tf_bot_taunt_victim_chance &lt;integer&gt;</p>
+       
+    </dl>
+
+    <dl>
+        <dt>tf_bot_warp_team_to_me</dt>
+        <dd>Teleports your team's bots to your position. Requires sv_cheats 1.</dd>
+        <p><strong>Syntax:</strong> tf_bot_warp_team_to_me</p>
+        
+    </dl>
+
+    <section id="ai-bot-behavior">
+    <h3>AI Bot Behavior</h3>
+    <p>Bots currently cannot execute special jumps (such as rocket jumps) or haul buildings.</p>
+    <p>If a bot kills a player, they roll a chance to taunt immediately after, and if it succeeds, they will taunt even if they are under enemy fire. However, bots will not taunt if carrying the enemy intelligence. This behavior applies to Robots in Mann vs. Machine mode.</p>
+    <p>Spy bots (and players) are properly ignored by other bots while disguised. However, upon 'touching' any enemy bot, sapping, shooting, or Cloaking, all other bots who see it happen will declare the bot/player a Spy and won't forget who they are until they change disguises while unseen or until the bot(s) who declared them a Spy dies or feigns death with the Dead Ringer.</p>
+    <p>Pyro bots will use the compression blast against projectiles and opponents with unusual frequency if on difficulties other than Easy.</p>
+    <p>Medic bots will usually heal all other classes before Snipers (and to a lesser extent Engineers) even if the "Medic!" voice command is used.</p>
+    <p>Medic bots tend to favor Heavies, Soldiers, Demomen, and Pyros, if being played by a human. If no human player is one of these classes, they are not likely to be pocketed.</p>
+    <p>A Medic bot with an ÜberCharge ready will immediately activate the charge if he gets hurt. This behavior is used by Über Medics in Mann vs. Machine mode.</p>
+    <p>Bots do not attack during setup time unless they are attacked first (with the exception of Demoman bots planting stickybombs).</p>
+    <p>Engineer bots do not upgrade (or even remove Sappers from) their Teleporters, and sometimes don't repair their Sentry Guns even when they're not under fire.</p>
+    <p>Engineer bots will never repair or upgrade a friendly Engineer bot's building unless that building is in the way of the Engineer's target.</p>
+    <p>Bots, excluding Engineers, Snipers, and Spies, will stay in their spawn positions on setup when attacking in an Attack/Defend map or a Payload map.</p>
+    <p>Spy bots, when spotted by another bot (possibly a player), will not attempt to backstab and will instead switch to their Revolver and shoot while retreating.</p>
+    <p>Demoman bots, once they know where a Sentry Gun is (usually after dying to one), will be able to stand out of range of the sentry and perfectly aim and time their stickybomb charges to land precisely where the Sentry Gun is. Walls and ceilings may occasionally get in the way of the stickybombs' flight path, though.</p>
+    <p>Sniper bots, upon scoping in and not finding a target, will use one of the "Negative" voice commands.</p>
+    <p>Friendly Medics will tend to heal a disguised Spy.</p>
+</section>
+
+<section id="ai-bot-bugs">
+    <h3>Bugs</h3>
+    <p>Bots may try to walk/shoot through unmovable objects such as walls.</p>
+    <p>Whenever a player/bot cloaks/decloaks or disguises/undisguises, the bots will 'see' players who are behind them and turn around, even if out of the bot's field of view. Note that this isn't due to any sounds made by the player (footsteps, miscellaneous weapon noises, etc.).</p>
+    <p>Though rarely, bots may stand inside one another during usage of an Engineer's Teleporter and get stuck (can't move).</p>
+    <p>When bots use voice commands (such as "Spy!" and "Move Up!"), text versions of the voice commands do not display.</p>
+    <p>A Medic bot who is healing a player will not avoid enemy fire or collect health pickups, even if he is at critically low health.</p>
+    <p>Bots are able to move while taunting, making the Holiday Punch ineffective.</p>
+    <p>Recently attacked Medic bots will often fail to use their Syringe Gun to deal with enemies at non-melee range, instead switching to their Bonesaw, or even to their Medi Gun on extremely rare occasions.</p>
+    <p>Medic bots will fail to lead their aim or to compensate for gravity while firing the Syringe Gun. This may be due to the Syringe Gun not being properly identified as a non-hitscan weapon in the bot AI code.</p>
+    <p>Spy bots are able to see and follow cloaked Spies (AI or player) should one give himself away, regardless of the difficulty level.</p>
+    <p>Even if a Spy is disguised as a class of his team (player only, as bots will never do this), enemies will still point him out as a Spy should he bump into an enemy.</p>
+   
+</section>
+
+<section id="ai-bot-modes">
+    <h3>Game Modes and Maps AI Bots Do Not Work On</h3>
+    <p>Currently, bots do not work on the following types of game modes or maps, even with a generated navigation mesh. (Spies and Snipers may work, though.)</p>
+    <ul>
+        <li>Arena and Versus Saxton Hale Modes NOTE</li>
+        <li>Payload Race NOTE</li>
+        <li>Mann Vs. Machine NOTE</li>
+        <li>Special Delivery</li>
+        <li>Robot Destruction</li>
+        <li>Cactus Canyon NOTE</li>
+        <li>Mannpower NOTE</li>
+        <li>PASS Time NOTE</li>
+        <li>Player Destruction NOTE</li>
+        <li>Snowycoast NOTE</li>
+        <li>Snowplow NOTE</li>
+        <li>Byre NOTE</li>
+        <li>Nightfall and Pipeline NOTE</li>
+        <li>Hassle Castle NOTE</li>
+    </ul>
+    
+</section>
+
+    <section id="Smaller sections">
+<section id="ai-bot-melee-bug">
+    <h3>Melee Weapon Bug</h3>
+    <p>Bots that have their Melee weapons out will occasionally not switch to their other weapons, even if they pick up ammo. This can be fixed by either killing them or just randomly.</p>
+</section>
+
+<section id="ai-bot-jungle-inferno-update">
+    <h3>Jungle Inferno Update</h3>
+    <p>After the Jungle Inferno Update, bots spawned with specific parameters (example: tf_bot_add 5 pyro blue normal) will die in their spawnrooms. This can be prevented with the command: tf_bot_reevaluate_class_in_spawnroom 0, which requires setting sv_cheats to 1.</p>
+</section>
+
+<section id="ai-bot-names">
+    <h3>AI Bot Names</h3>
+    <p>The AI bots are programmed to have different names, with many of their names being references to Team Fortress 2, Valve's other works, and computer programming. Many of these names have been requested on the Steam forums.</p>
+   
+</section>
+
+<section id="ai-bot-unused-names">
+    <h3>Unused Bot Names</h3>
+    <p>The following bot names were found in a leaked source code version of TF2, containing bot names that were never put into production for unknown reasons.</p>
+    <ul>
+        <li>John Spartan</li>
+        <li>Leeloo Dallas Multipass</li>
+        <li>Sho'nuff</li>
+        <li>Bruce Leroy</li>
+        <li>CAN YOUUUUUUUUU DIG IT?!?!?!?!</li>
+        <li>Big Gulp, Huh?</li>
+        <li>Stupid Hot Dog</li>
+        <li>I'm your huckleberry</li>
+        <li>The Crocketeer</li>
+    </ul>
+   
+</section>
+
+<section id="ai-bot-customization">
+    <h3>AI Bot Extra Customization</h3>
+    <p>AI bot names can also be customized by a player by typing in, for example, tf_bot_add heavyweapons blue "Blu Hoovy"; this example would put a BLU Heavy on the BLU team with the name "Blu Hoovy".)</p>
+</section>
+
+    </section>
+
+
+Navigation Menu (index.html):
+
+<nav>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#stock-bots">Stock AI Bots</a></li>
+        <li><a href="#puppet-bots">Puppet Bots</a></li>
+        <li><a href="#html-css">HTML and CSS</a></li>
+    </ul>
+</nav>
+
+
+
+Footer (index.html):
+
+<footer>
+    <p>Contact us: info@tf2botguide.com</p>
+    <p>&copy; 2023 TF2 Bot Guide. All rights reserved.</p>
+</footer>
+
+
+
+<link rel="stylesheet" type="text/css" href="styles.css">  
+    
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TF2 Bots Guide</title>
+</head>
+
+
+
+</html>

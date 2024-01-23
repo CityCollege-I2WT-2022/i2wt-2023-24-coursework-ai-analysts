@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StrategyGames</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+            
+            body {
+                background-color: #1c1c1c;
+                color: #b2b2b2;
+                font-family: 'Old Standard TT', serif;
+                margin: 20px;
+            }
+
+            h1 {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 60px;
+            }
+            
+            h {
+                color: #ffcc00;
+                text-align: center;
+                font-family: 'Old Standard TT', serif;font-size: 30px;
+            }
+                #header {
+                background-color: #3498db; /* Blue background for Header 1 */
+            }
+
+            p {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 24px;
+                letter-spacing: 1px;
+            }
+            
+            li {
+                text-align: justify;
+                margin-bottom: 20px;
+                border: 2px solid #c4a77d;
+                padding: 10px;
+                border-radius: 8px;
+                font-family: 'Old Standard TT', serif;font-size: 20px;
+                letter-spacing: 1px;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap">
+    </head>
+    <body>
+        <h1>Strategy Games</h1>
+        <img src="photos/StategyGames.jpg" alt="VideoGamesImage" style="width: 100%; height: auto;">
+        <br>
+        <h onclick="toggleParagraph('paragraph1')">History</h>
+        <p id="paragraph1" class="hidden">With roots in classic board games like Chess, strategy games are a well-liked game genre. The first strategy games, dubbed "Kriegspiele" (English for "wargames"), came out in the late 1700s with the goal of instructing cadets. Over the next two centuries, strategy games have been improved upon and developed into a kind of entertainment. The popular computer strategy games of today have a roots in the roleplaying and board games of the 20th century. Both the academic community and game producers have displayed renewed interest in procedural game content generation in recent years.</p>
+        <br>
+        <h onclick="toggleParagraph('paragraph2')">Market</h>
+        <p id="paragraph2" class="hidden">Technical limitations prevented developers from providing their titles with an important amount of pre-designed game content when the first commercial computer games were released in the early 1980s. To save memory and storage space, game material such as levels, worlds, tales, weapons, and rivals had to be generated at program runtime. There are two reasons why creating game material "on the fly" has become more popular: Initially, the cost of producing games has increased significantly over the last 10 years because of the labor required to create the amount of content that players desire. By designing game content that adapts to the way a player plays a game, game makers try to find a way to customize their titles to suit the preferences of certain players.</p>
+        <br>
+        <h><a href="2.SineglePlayerGames.html">Next</a></h>
+        <br>
+        <h><a href="0.Home.html">Home</a></h>
+        
+        <script>
+        function toggleParagraph(paragraphId) {
+            var paragraph = document.getElementById(paragraphId);
+            paragraph.classList.toggle('hidden');
+        }
+
+        function toggleList(listId) {
+            var list = document.getElementById(listId);
+            list.classList.toggle('hidden');
+        }
+    </script>
+        
+    </body>
+    </html>

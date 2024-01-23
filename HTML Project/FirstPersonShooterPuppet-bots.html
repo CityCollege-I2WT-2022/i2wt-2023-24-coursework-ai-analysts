@@ -1,0 +1,111 @@
+<section id="puppet-bots">
+    <h2>Puppet Bots</h2>
+    <p>Discover the world of puppet bots and how they can be customized to create unique challenges for players. Explore scripting options and commands to control puppet bots effectively.</p>
+
+    <p>Puppet bots have no AI code and cannot move or act on their own. These bots can be used like puppets though: players can manipulate them to follow the player's commands such as following the player around and firing their weapons. Puppet bots are mainly used for testing purposes and can also create stunning visuals if manipulated accordingly. To spawn puppet bots, sv_cheats has to be set to 1.</p>
+
+    <h3>Puppet bot commands</h3>
+    <p>Not all of the following commands work; some working commands are also omitted.</p>
+
+    <p>These commands may or may not work for AI bots as well.</p>
+
+    <p>Note: entering the command without any values will display the command's current setting and a brief description.</p>
+
+    <dl>
+        <dt>bot</dt>
+        <dd>This command will create a bot on the given team with the specified class and name. If team or name is omitted, they will be assigned randomly.</dd>
+        <p><strong>Syntax:</strong> bot [&lt;teamname/number&gt;] [&lt;classname&gt;] [&lt;name&gt;] [&lt;number&gt;]</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;number&gt;:</strong> Amount of bots to add.</li>
+            <li><strong>&lt;teamname/number&gt;:</strong> Specifies the team name or number to assign the bot. Where name/number can be RED or 1, BLU or 0.</li>
+            <li><strong>&lt;classname&gt;:</strong> The classname of the class can be Demoman, Engineer, Heavy, Medic, Pyro, Scout, Soldier, Sniper, or Spy.</li>
+            <li><strong>&lt;teleport&gt;:</strong> Teleports the spawned bot to where your cursor is aiming.</li>
+            <li><strong>&lt;targetdummy&gt;:</strong> Prevents the spawned bot from losing health.</li>
+            <li><strong>&lt;name&gt;:</strong> name can be anything. If there is already someone with the same name, an incremental number (starting at 1) surrounded with parenthesis will be added to the beginning of the name. For example, joe, (1)joe, (2)joe, etc. If no name is given then the name will be "bot" followed by a number starting with 01; for example, the first bot will be Bot01, the next Bot02, and so on.</li>
+        </ul>
+        <p><strong>Example:</strong> bot -team red -class Engineer -name joe</p>
+    </dl>
+
+    <dl>
+        <dt>bot_changeclass</dt>
+        <dd>Force all bots to change to the specified class.</dd>
+        <p><strong>Syntax:</strong> bot_changeclass &lt;name&gt; &lt;classname&gt;</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;name&gt;:</strong> Name of the target bot.</li>
+            <li><strong>&lt;classname&gt;:</strong> The classname of the class the bot will switch to. Default is "" (aka blank).</li>
+        </ul>
+        <p><strong>Example:</strong> bot_changeclass bot01 Soldier</p>
+    </dl>
+
+    <dl>
+        <dt>bot_changeteams</dt>
+        <dd>Make all bots change teams. This forces all the bots to switch teams. If a bot was on the RED team then it will now be on the BLU team and vice versa.</dd>
+        <p><strong>Syntax:</strong> bot_changeteams</p>
+        
+    </dl>
+
+    <dl>
+        <dt>bot_command</dt>
+        <dd>Sends specified command on behalf of specified bot.</dd>
+        <p><strong>Syntax:</strong> bot_command &lt;name/all&gt; &lt;console command&gt;</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;name/all&gt;:</strong> Name or id of the bot to send the command to. Setting this to 'all' will send the command to all the bots.</li>
+            <li><strong>&lt;console command&gt;:</strong> Can be any of the ones listed in console commands, as well as some of the cheats.</li>
+        </ul>
+        <p><strong>Example 1:</strong> bot_command bot01 "voicemenu 0 0"</p>
+        <p><strong>Example 2:</strong> bot_command bot01 "taunt"</p>
+        <p>The slot commands (slot1, slot2, etc.) do not work with bot_command, however with bot_forcefireweapon, all bots in that class can be made to switch to a weapon and start firing, then made to stop. Only the entire group of bots in that class can be made to do so, however.</p>
+    </dl>
+
+ 
+
+    <dl>
+        <dt>bot_dontmove</dt>
+        <dd>Bots are allowed or prevented from moving. When set to 1 the bots cannot move but they can still turn and jump. Note with a combination of this command and bot_mimic bots can be moved to certain areas and left there.</dd>
+        <p><strong>Syntax:</strong> bot_dontmove &lt;integer&gt;</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;integer&gt;:</strong> Bots will be allowed to move when set to 1. Default is 0 (disabled).</li>
+        </ul>
+        <p><strong>Example:</strong> bot_dontmove 1</p>
+    </dl>
+
+    
+
+    <p>bot_forceattack</p>
+    <p>Force all bots to automatically fire their currently selected weapons. If bot_forceattack2 is set to 0, bots execute primary_fire; if set to 1, bots execute secondary_fire.</p>
+    <p><strong>Syntax:</strong> bot_forceattack &lt;integer&gt;</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><strong>&lt;integer&gt;:</strong> When set to 1, all bots fire their guns. Default is 0 (disabled).</li>
+    </ul>
+    <p><strong>Example:</strong> bot_forceattack 1</p>
+
+   
+
+    <p>bot_forceattack2</p>
+    <p>Make all bots execute secondary_fire on their currently selected weapons when bot_forceattack is set to 1.</p>
+    <p><strong>Syntax:</strong> bot_forceattack2 &lt;integer&gt;</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><strong>&lt;integer&gt;:</strong> Bot will use its weapon's secondary_fire when set to 1, primary_fire when set to 0.</li>
+    </ul>
+    <p><strong>Example:</strong> bot_forceattack2 1</p>
+
+    
+    <dl>
+        <dt>bot_hurt</dt>
+        <dd>Hurt a bot by team, or all bots ("all").</dd>
+        <p><strong>Syntax:</strong> bot_hurt [&lt;name&gt;] [&lt;team&gt;] [&lt;damage&gt;]</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>&lt;name&gt;:</strong> Name of the bot to hurt.</li>
+            <li><strong>&lt;team&gt;:</strong> Specifies the team name of the bot to hurt. Can be RED, BLU, or all.</li>
+            <li><strong>&lt;damage&gt;:</strong> Specifies the amount of damage the bot will receive. If a negative number is set, it will heal (and overheal) the bot instead.</li>
+        </ul>
+        <p><strong>Example:</strong> bot_hurt -name joe -team red -damage 150</p>
+    </dl>
+</section>
