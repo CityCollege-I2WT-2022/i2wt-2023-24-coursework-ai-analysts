@@ -134,7 +134,7 @@
         <dt>bot_changeteams</dt>
         <dd>Make all bots change teams. This forces all the bots to switch teams. If a bot was on the RED team then it will now be on the BLU team and vice versa.</dd>
         <p><strong>Syntax:</strong> bot_changeteams</p>
-        <!-- Additional details can be added if needed -->
+        
     </dl>
 
     <dl>
@@ -151,7 +151,7 @@
         <p>The slot commands (slot1, slot2, etc.) do not work with bot_command, however with bot_forcefireweapon, all bots in that class can be made to switch to a weapon and start firing, then made to stop. Only the entire group of bots in that class can be made to do so, however.</p>
     </dl>
 
-    <!-- Additional commands can be added here -->
+    
 
     <dl>
         <dt>bot_dontmove</dt>
@@ -164,7 +164,7 @@
         <p><strong>Example:</strong> bot_dontmove 1</p>
     </dl>
 
-    <!-- Add more commands as needed -->
+    
 
     <p>bot_forceattack</p>
     <p>Force all bots to automatically fire their currently selected weapons. If bot_forceattack2 is set to 0, bots execute primary_fire; if set to 1, bots execute secondary_fire.</p>
@@ -175,7 +175,7 @@
     </ul>
     <p><strong>Example:</strong> bot_forceattack 1</p>
 
-    <!-- Continue adding commands -->
+    
 
     <p>bot_forceattack2</p>
     <p>Make all bots execute secondary_fire on their currently selected weapons when bot_forceattack is set to 1.</p>
@@ -186,9 +186,6 @@
     </ul>
     <p><strong>Example:</strong> bot_forceattack2 1</p>
 
-    <!-- Continue adding commands -->
-
-    <!-- Add the rest of the commands as needed -->
 
     <dl>
         <dt>bot_hurt</dt>
@@ -216,81 +213,81 @@
         <dt>tf_bot_add</dt>
         <dd>This command will create one or more AI bots of random classes on random teams. They will also be assigned random names from a default set.</dd>
         <p><strong>Syntax:</strong> tf_bot_add [&lt;count&gt;] [&lt;class&gt;] [&lt;team&gt;] [&lt;difficulty&gt;] [&lt;name&gt;] [noquota]</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_difficulty</dt>
         <dd>Defines the skill of bots joining the game.</dd>
         <p><strong>Syntax:</strong> tf_bot_difficulty &lt;level&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_fire_weapon_allowed</dt>
         <dd>Determines whether bots should fire weapons. If disabled, bots can still use certain non-damaging weapons such as the Medi Gun.</dd>
         <p><strong>Syntax:</strong> tf_bot_fire_weapon_allowed &lt;integer&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_force_class</dt>
         <dd>If set to a class name, all TFBots will respawn as that class.</dd>
         <p><strong>Syntax:</strong> tf_bot_force_class &lt;class&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
-    <!-- Add more commands as needed -->
+    
 
     <dl>
         <dt>tf_bot_kick</dt>
         <dd>This command will remove one or all AI bots.</dd>
         <p><strong>Syntax:</strong> tf_bot_kick &lt;name/all/team&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_kill</dt>
         <dd>This command will kill one or all AI bots.</dd>
         <p><strong>Syntax:</strong> tf_bot_kill &lt;name/all/team&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_melee_only</dt>
         <dd>Determines whether a bot should only use melee weapons or not.</dd>
         <p><strong>Syntax:</strong> tf_bot_melee_only &lt;integer&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
-    <!-- Add more commands as needed -->
+   
 
     <dl>
         <dt>tf_bot_quota</dt>
         <dd>Determines the total number of TFBots in the game. Only has effect if tf_bot_quota_mode = "fill" or "match".</dd>
         <p><strong>Syntax:</strong> tf_bot_quota &lt;integer&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_quota_mode</dt>
         <dd>Determines the type of quota.</dd>
         <p><strong>Syntax:</strong> tf_bot_quota_mode &lt;normal/fill/match&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <dl>
         <dt>tf_bot_taunt_victim_chance</dt>
         <dd>Determines how often a Bot will taunt a human victim.</dd>
         <p><strong>Syntax:</strong> tf_bot_taunt_victim_chance &lt;integer&gt;</p>
-        <!-- Parameters and example can be included as needed -->
+       
     </dl>
 
     <dl>
         <dt>tf_bot_warp_team_to_me</dt>
         <dd>Teleports your team's bots to your position. Requires sv_cheats 1.</dd>
         <p><strong>Syntax:</strong> tf_bot_warp_team_to_me</p>
-        <!-- Parameters and example can be included as needed -->
+        
     </dl>
 
     <section id="ai-bot-behavior">
@@ -324,7 +321,7 @@
     <p>Medic bots will fail to lead their aim or to compensate for gravity while firing the Syringe Gun. This may be due to the Syringe Gun not being properly identified as a non-hitscan weapon in the bot AI code.</p>
     <p>Spy bots are able to see and follow cloaked Spies (AI or player) should one give himself away, regardless of the difficulty level.</p>
     <p>Even if a Spy is disguised as a class of his team (player only, as bots will never do this), enemies will still point him out as a Spy should he bump into an enemy.</p>
-    <!-- Include other bugs provided in the previous response -->
+   
 </section>
 
 <section id="ai-bot-modes">
@@ -346,7 +343,7 @@
         <li>Nightfall and Pipeline NOTE</li>
         <li>Hassle Castle NOTE</li>
     </ul>
-    <!-- Include other game modes and maps provided in the previous response -->
+    
 </section>
 
     <section id="Smaller sections">
@@ -363,7 +360,7 @@
 <section id="ai-bot-names">
     <h3>AI Bot Names</h3>
     <p>The AI bots are programmed to have different names, with many of their names being references to Team Fortress 2, Valve's other works, and computer programming. Many of these names have been requested on the Steam forums.</p>
-    <!-- Include the list of AI bot names provided in the previous response -->
+   
 </section>
 
 <section id="ai-bot-unused-names">
@@ -380,7 +377,7 @@
         <li>I'm your huckleberry</li>
         <li>The Crocketeer</li>
     </ul>
-    <!-- Include other unused bot names provided in the previous response -->
+   
 </section>
 
 <section id="ai-bot-customization">
