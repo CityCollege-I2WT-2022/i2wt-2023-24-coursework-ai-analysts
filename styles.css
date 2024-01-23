@@ -22,14 +22,12 @@ nav a {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+            width: 100%;
+            background-color: #333; /* You can adjust the background color /
+            color: white; / You can adjust the text color */
+            text-align: center;
+            padding: 10px;
+        }
 
 body {
     font-family: 'Arial', sans-serif;
