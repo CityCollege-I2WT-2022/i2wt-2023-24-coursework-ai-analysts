@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <link rel="stylesheet" href="CSS_Stylesheet.css">
+    <title id="homeTitle"> AI Analysts Home Page </title>
+    <style> 
+         ul.slideshow{
+          list-style-type: none;
+          text-align: center;
+        }
+        #previous{
+          position:absolute;
+          font-size: 50px;
+          font-weight:bold;
+          top:500px;
+            left:771px;
+        }
+        #next{
+          position:absolute;
+          font-size: 50px;
+          font-weight:bold;
+          top:500px;
+          right:771px;
+        }
+         
+    </style>
+</head>
+<body>
+    <!--To do
+
+1. Class = homeFrame, Link to images of each game
+2. iframe, get the images to target the iframe
+3. homeNav, link the images to the home pages-
+
+
+
+
+
+
+
+
+-->
+    <div class="homeNav"> 
+        <ul>
+            <li><em> Home </em></li>
+            <li><a href="HorrorDescription.html"> Horror Games </a></li>
+            <li><a href="FirstPersonShooter.html"> FPS Games </a></li>
+            <li><a href="SportsGamesAI.html"> Sports Games </a></li>
+            <li><a href="Strategy Games.html"> Strategy Games </a></li>
+            <li><a href="About_Us_Page.html"> About Us Page </a></li>
+        </ul> 
+    </div>
+    <div class="homeIntro">
+        <h1> <strong> Welcome to the AI Analysts Page! </strong></h1>
+        <p> Greetings Users, and welcome to our webpage! We are the AI Analysts Team, and have created this here site to explore the types of AI and their relevant behaviors in different game genres! Have you ever wondered how terrifying monsters chase you down in horror games? How the teams in sports games function and coordinate? Perhaps how the AI fights in an FPS? Or maybe how the algorythm is able to stand against the player in games of strategy and wit? Well, we here at City College have come to answer these questions, with deep-dives into the mechanics, functions, triggers and logic of AI Programs in games, including everything from FNAF, to TF2, FIFA, NBA, and even Chess!</p>
+    </div>
+    <div class="homeFrame"> 
+        <ul class="slideshow">
+            <li class="slideshowitem"> 
+                <a href="HorrorDescription.html">
+                <img src="photos/https://play-lh.googleusercontent.com/myJ2kwywsCRglKkZuHBq6Aku9PX7HB75v-8KbnTK9JOPU6z0hpD9xtvjiTGqrn-e4eI" height="500" width="500">
+                <h1>Horror</h1>
+                </a>
+            </li>
+            <li class="slideshowitem"> 
+                <a href="FirstpersonShooter.html">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/14288655-a18c-4568-9bca-a05ab60f628c/d2bl6h0-f9efe524-840b-47cb-a286-e788cda020b6.jpg/v1/fit/w_474,h_485,q_70,strp/team_fortress_2_logo__psd__by_a88huff_d2bl6h0-375w-2x.jpg" height="500" width="500">
+                    <h1>First Person Shooters</h1>
+                </a>
+            </li>
+            <li class="slideshowitem"> 
+                <a href="Strategy Games.html">
+                <img src="photos/https://assets1.ignimgs.com/2018/11/02/warcraft-3-reforged---button-1541191386065.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" height="500" width="500">
+                    <h1>Strategy</h1>
+                </a>
+            </li>
+            <li class="slideshowitem"> 
+                <a href="SportGamesAI.html">
+                    <img src="photos/https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTk5MjY5Mjk2NDkxMjEwMTQy/ea-sports-fc-24-cover-image.webp" height="500" width="500">
+                    <h1>Sports</h1>
+                </a>
+            </li>
+        </ul>
+        <a id="previous">&lt;</a>
+        <a id="next">&gt;</a> 
+        <iframe id="homeFrame" width="300" height="300" frameborder="0"> </iframe>
+    </div>
+    
+     <script>
+        var showPlace=0;
+        var slideShowItems = document.getElementsByClassName("slideshowitem");
+        for(var i=0; i<slideShowItems.length; i++){
+          console.log(slideShowItems[i].innerHTML);
+          slideShowItems[i].style.display="none";
+        }
+        slideShowItems[showPlace].style.display="block";
+          
+        var previousPlace = function(){
+            console.log("previous");
+          slideShowItems[showPlace].style.display="none";
+          showPlace--;
+          if(showPlace<0){
+            showPlace=slideShowItems.length-1;
+          }
+          slideShowItems[showPlace].style.display="block";
+        }
+        
+        var previousPlaceArrow = document.getElementById("previous");
+        previousPlaceArrow.addEventListener("click", previousPlace);  
+        
+        var nextPlace = function(){
+            console.log("next");
+          slideShowItems[showPlace].style.display="none";
+          showPlace++;
+          if(showPlace==slideShowItems.length){
+            showPlace=0;
+          }
+          slideShowItems[showPlace].style.display="block";
+        }
+        
+        var nextPlaceArrow = document.getElementById("next");
+        nextPlaceArrow.addEventListener("click", nextPlace);   
+    </script>
+</body>
+</html>
