@@ -1,5 +1,5 @@
 Group Name   : Ai Analysts
-Website Title:
+Website Title: Cross-genre AI Analysis
 Group Leader : Skenderoglou Diogenis-Rafail
 Group Member1: Zikou Antonios
 Group Member2: Lysselis Sokratis
