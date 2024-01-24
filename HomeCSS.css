@@ -1,0 +1,36 @@
+div.homeNav ul{
+	list-style-type: none; 
+  	padding: 0; 
+  	margin: 0; 
+}
+div.homeNav>ul>li{
+	float:left;
+	border: solid 1px black;
+	width:120px;
+	background-color: aliceblue;
+	border-radius:16px;
+	margin-right:8px;
+    text-align: center
+}
+div.homeNav a,span{
+	display:block;
+	text-align: center;
+}
+div.homeNav span{
+	border-radius:inherit;
+}
+div.homeNav a{
+	text-decoration-line: none;
+}
+
+.homeIntro>p{
+    text-decoration: none;
+    text-align: justify;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
